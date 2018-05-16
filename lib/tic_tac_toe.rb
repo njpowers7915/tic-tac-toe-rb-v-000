@@ -44,7 +44,11 @@ def turn(board)
   user_input = gets
   index = input_to_index(user_input)
   if valid_move?(board, index) == true
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index, character = "X")
+>>>>>>> d7aac6aeb2cf9bcba29f54ce89f6448c6400f1e7
     display_board(board)
   else
     turn(board)
@@ -99,11 +103,19 @@ def winner(board)
 end
 
 def play(board)
+<<<<<<< HEAD
   character = "X"
   until over?(board)
     current_player(board)
     turn(board)
   end
+=======
+  turn(board)
+  until over?(board)
+
+  end
+  
+>>>>>>> d7aac6aeb2cf9bcba29f54ce89f6448c6400f1e7
   if winner(board) == "X"
     puts "Congratulations X!"
   elsif winner(board) == "O"
